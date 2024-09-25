@@ -1,4 +1,3 @@
-# app/main.py
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from Models.models import db, Student
@@ -12,7 +11,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
 with app.app_context():
-    db.create_all()  # Create the database tables
+    db.create_all()
 
 @app.route("/add", methods=['POST'])
 def add_student():
