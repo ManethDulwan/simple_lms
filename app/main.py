@@ -5,7 +5,6 @@ from Models.models import db, Student
 app = Flask(__name__)
 CORS(app)
 
-# Configure SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:@localhost/lms'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
